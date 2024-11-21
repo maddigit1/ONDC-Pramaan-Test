@@ -1,0 +1,232 @@
+[
+    {
+        "cat_title": "Retail",
+        "category": "Grocery - ONDC:RET10",
+        "status": "active"
+    },
+    {
+        "cat_title": "Retail",
+        "category": "F&B - ONDC:RET11",
+        "status": "active"
+    },
+    {
+        "cat_title": "Retail",
+        "category": "Fashion - ONDC:RET12",
+        "status": "active"
+    },
+    {
+        "cat_title": "Retail",
+        "category": "BPC - ONDC:RET13",
+        "status": "active"
+    },
+    {
+        "cat_title": "Retail",
+        "category": "Electronics - ONDC:RET14",
+        "status": "active"
+    },
+    {
+        "cat_title": "Retail",
+        "category": "Home & Decor - ONDC:RET15",
+        "status": "active"
+    },
+    {
+        "cat_title": "Retail",
+        "category": "Pharma - ONDC:RET16",
+        "status": "active"
+    },
+    {
+        "cat_title": "Retail",
+        "category": "Toys & Games - ONDC:RET17",
+        "status": "active"
+    },
+    {
+        "cat_title": "Retail",
+        "category": "Health & Wellness - ONDC:RET18",
+        "status": "active"
+    },
+    {
+        "cat_title": "Retail",
+        "category": "Pharma - ONDC:RET19",
+        "status": "active"
+    },
+    {
+        "cat_title": "Retail",
+        "category": "Auto Components & Accessories - ONDC:RET1A",
+        "status": "active"
+    },
+    {
+        "cat_title": "Retail",
+        "category": "Hardware and Industrial - ONDC:RET1B",
+        "status": "active"
+    },
+    {
+        "cat_title": "Retail",
+        "category": "Building and construction supplies - ONDC:RET1C",
+        "status": "active"
+    },
+    {
+        "cat_title": "Retail",
+        "category": "Chemicals - ONDC:RET1D",
+        "status": "active"
+    },
+    {
+        "cat_title": "Retail",
+        "category": "Packaging Product - ONDC:RET1E",
+        "status": "active"
+    },
+    {
+        "cat_title": "Logistics",
+        "category": "Logistics - nic2004:60232",
+        "status": "active"
+    },
+    {
+        "cat_title": "Logistics",
+        "category": "Domestic Logistics - ONDC:LOG10",
+        "status": "deactive"
+    },
+    {
+        "cat_title": "Logistics",
+        "category": "International Logistics - ONDC:LOG11",
+        "status": "deactive"
+    },
+    {
+        "cat_title": "Agriculture",
+        "category": "Agri Inputs - ONDC:AGR10",
+        "status": "deactive"
+    },
+    {
+        "cat_title": "Agriculture",
+        "category": "Agri Outputs - ONDC:AGR11",
+        "status": "deactive"
+    },
+    {
+        "cat_title": "Financial Services",
+        "category": "Gift card - ONDC:FIS10",
+        "status": "active"
+    },
+    {
+        "cat_title": "Financial Services",
+        "category": "FASTag - ONDC:FIS11",
+        "status": "deactive"
+    },
+    {
+        "cat_title": "Financial Services",
+        "category": "Credit - ONDC:FIS12",
+        "status": "active"
+    },
+    {
+        "cat_title": "Financial Services",
+        "category": "Insurance - ONDC:FIS13",
+        "status": "active"
+    },
+    {
+        "cat_title": "Financial Services",
+        "category": "Investments - ONDC:FIS14",
+        "status": "active"
+    },
+    {
+        "cat_title": "Media Entertainment and Content (MEC)",
+        "category": "Print Content - ONDC:MEC10",
+        "status": "deactive"
+    },
+    {
+        "cat_title": "Media Entertainment and Content (MEC)",
+        "category": "Video and Audio Content - ONDC:MEC11",
+        "status": "deactive"
+    },
+    {
+        "cat_title": "Mobility, Transportation & Travel",
+        "category": "Ride Hailing - ONDC:TRV10",
+        "status": "active"
+    },
+    {
+        "cat_title": "Mobility, Transportation & Travel",
+        "category": "Ticket(Unreserved) - ONDC:TRV11",
+        "status": "active"
+    },
+    {
+        "cat_title": "Mobility, Transportation & Travel",
+        "category": "Ticket(Reserved) - ONDC:TRV12",
+        "status": "active"
+    },
+    {
+        "cat_title": "Mobility, Transportation & Travel",
+        "category": "Accomodation Booking - ONDC:TRV13",
+        "status": "deactive"
+    },
+    {
+        "cat_title": "Network Services",
+        "category": "RSP - ONDC:NTS10",
+        "status": "deactive"
+    },
+    {
+        "cat_title": "Network Services",
+        "category": "ODR - ONDC:NTS11",
+        "status": "deactive"
+    },
+    {
+        "cat_title": "ONEST",
+        "category": "Work Opportunities - ONDC:ONEST10",
+        "status": "deactive"
+    },
+    {
+        "cat_title": "ONEST",
+        "category": "Learning Experiences - ONDC:ONEST11",
+        "status": "deactive"
+    },
+    {
+        "cat_title": "ONEST",
+        "category": "Scholarships - ONDC:ONEST12",
+        "status": "deactive"
+    },
+    {
+        "cat_title": "ONEST",
+        "category": "Mentorship - ONDC:ONEST13",
+        "status": "deactive"
+    },
+    {
+        "cat_title": "Services",
+        "category": "Home Services - Appliance Repair Services - ONDC:SRV10",
+        "status": "deactive"
+    },
+    {
+        "cat_title": "Services",
+        "category": "Home Services - Infra Services - ONDC:SRV11",
+        "status": "deactive"
+    },
+    {
+        "cat_title": "Services",
+        "category": "Home Services - Personal Care Services - ONDC:SRV12",
+        "status": "deactive"
+    },
+    {
+        "cat_title": "Services",
+        "category": "Healthcare Services - ONDC:SRV13",
+        "status": "deactive"
+    },
+    {
+        "cat_title": "Services",
+        "category": "Agriculture Services - ONDC:SRV14",
+        "status": "deactive"
+    },
+    {
+        "cat_title": "Services",
+        "category": "Subscription Services - ONDC:SRV15",
+        "status": "deactive"
+    },
+    {
+        "cat_title": "Services",
+        "category": "Spiritual Services - ONDC:SRV16",
+        "status": "deactive"
+    },
+    {
+        "cat_title": "Services",
+        "category": "Equipment Hiring - ONDC:SRV17",
+        "status": "deactive"
+    },
+    {
+        "cat_title": "Services",
+        "category": "Bids & Auction - ONDC:SRV18",
+        "status": "deactive"
+    }
+]

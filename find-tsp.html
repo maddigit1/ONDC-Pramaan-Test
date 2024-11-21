@@ -1,0 +1,162 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pramaan - Find TSP</title>
+    <link rel="preload" href="css/app.css" as="style" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/base_v1.css">
+    <link rel="stylesheet" href="css/main.min.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/pramaan.css">
+	   <link rel="stylesheet" href="css/pr-find-tsp.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+        <img src="https://ondc.org/assets/theme/images/ondc_registered_logo.svg" class="header-logo" alt="ONDC | Open Network for Digital Commerce">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav pr-menu-items">
+        <li class="nav-item">
+          <p><a class="nav-link" aria-current="page" href="index.html">Home</a></p>
+        </li>
+        <li class="nav-item">
+          <p><a class="nav-link" href="toolbox.html">Toolbox</a></p>
+        </li>
+        <li class="nav-item">
+          <p><a class="nav-link" href="how-to-guide.html">How to guide?</a></p>
+        </li>
+        <li class="nav-item">
+          <p class="active"><a class="nav-link" href="find-tsp.html">Find TSPs</a></p>
+        </li>
+        <li class="nav-item">
+          <p><a class="nav-link" href="pr-videos.html">Videos</a></p>
+        </li>
+        <li class="nav-item">
+          <p><a class="nav-link" href="#need-help">Need help</a></p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="tool-banner-section">
+    <div class="container">
+        <p class="to-bnr-title">Find the right Technology Service Provider</p>
+        <p class="to-bnr-cnt">Select the right Technology Service Provider who can help you close the integration journey faster. Choose from the below list of TSPs, do make sure that TSP is live on the domains that you require as per Pramaan. This gives an assurance that the software being supplied by TSP is capable of interacting using ONDC API specifications.</p>
+    </div>
+</div>
+
+<div class="sub-nav-section">
+    <div class="container">
+        <p><a href="index.html"><b>Home</b></a></p>
+        <p>></p>
+        <p>Find TSPs</p>
+    </div>
+</div>
+
+
+<div class="search-tsp-section">
+    <div class="container">
+        <div class="search-tsp-main-div">
+            <p class="search-sec-title">Search TSPs</p>
+            <p class="search-sub-cnt">You may also reach out to TSPs who can help you build the software as required.</p>
+            <div class="search-input-div">
+                <input type="text" class="" name="Organisation-Details" id="organisation-details" placeholder="Organisation Details">
+                <input type="text" class="" name="Role" id="role" placeholder="Role">
+                <input type="text" class="" name="Domain" id="domain" placeholder="Domain">
+                <div class="tsp-search-btn-div">
+                    <button class="btn tsp-search-btn" onclick="processSearchTSP()">Click to Search</button>
+                    <button class="btn tsp-search-btn tsp-search-cancel-btn" onclick="Clearbtn()">Clear</button>
+                </div>
+            </div>
+            <p class="search-res-title">List of TSPs</p>
+            <div class="tsp-res-div" id="tsp-res-div">
+                <table class="table tsp-res-table">
+                    <thead>
+                        <td>#</td>
+                        <td>Organization Details</td>
+                        <td>Roles</td>
+                        <td>Domains tested on Pramaan</td>
+                        <td>NP Clients</td>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1.</td>
+                            <td>ID: 124 <br>Name: ABC Private Limited <br>Website: abc-abc.com</td>
+                            <td>TSP - Buyer</td>
+                            <td>ONDC:TRV10 - Ride hailing</td>
+                            <td>2314- Ushop (ushop.com) <br>9081- xpressbazaar (xpressbazaar.com)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="tsp-tbl-note-div d-flex">
+        <p class="tsp-tbl-note"><b>Note: </b></p>
+        <p class="tsp-tbl-note">This is a list of TSPs who’s software has been tested on Pramaan. You are expected to do thorough due diligence before entering into any business arrangement with any of these entities. ONDC shall not be liable for issues arising out of this arrangement between you and TSPs.</p>
+    </div>
+</div>
+
+<div class="pr-footer-section" id="need-help">
+    <div class="container">
+        <p class="pr-footer-title">Need Help</p>
+        <div class="row">
+            <div class="mb-4 mb-sm-0 col-sm-4 col-md-4">
+                <p class="pr-f-main-cnt"><b>Slack Channel:</b></p>
+                <p class="pr-f-sub-cnt">Join our Slack channel: #ext-pramaan-qa</p>
+                <button class="join-btn btn" onclick="window.open('https://portal.ondc.org/user-confirmation','_blank')">Join Now</button>
+            </div>
+            <div class="mb-4 mb-sm-0 col-sm-4 col-md-4">
+                <p class="pr-f-main-cnt"><b>Email Support</b></p>
+                <p class="pr-f-sub-cnt">Contact us: <a href="mailto:support.pramaan@ondc.org">support.pramaan@ondc.org</a></p>
+            </div>
+            <div class="mb-4 mb-sm-0 col-sm-4 col-md-4">
+                <p class="pr-f-main-cnt"><b>Feedback</b></p>
+                <p class="pr-f-sub-cnt">Share your feedback: <a href="mailto:support.preprod@ondc.org">support.preprod@ondc.org</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="policy-section">
+    <div class="policy-div">
+        <p><a href="">Privacy policy</a></p>
+        <p>|</p>
+        <p><a href="">Terms of use</a></p>
+    </div>
+    <div class="copyright-div">ONDC | Open Network for Digital Commerce © 2024</div>
+    <div class="social-icons-div">
+        <a href="https://www.linkedin.com/company/open-network-for-digital-commerce" target="_blank" rel="noopener" aria-label="LinkedIn"></a><img src="images/linkedin.png" }}" alt="linkedin"></a>
+        <a href="https://www.instagram.com/ondc_official/" target="_blank" rel="noopener" aria-label="Instagram"><img src="images/instagram.png" }}" alt="instagram"></a>
+        <a href="https://www.youtube.com/@ondc1300" target="_blank" rel="noopener" aria-label="Youtube"><img src="images/youtube.png" }}" alt="youtube"></a>
+        <a href="https://www.facebook.com/pages/category/Nonprofit-organization/ONDC-Ltd-103148322189702/" target="_blank" rel="noopener" aria-label="Facebook"><img src="images/facebook.png" }}" alt="facebook"></a>       
+        <a href="https://twitter.com/ONDC_Official" target="_blank" rel="noopener" aria-label="Twitter"><img src="images/twitter.png" }}" alt="twitter"></a> 
+        <a href="https://www.kooapp.com/profile/OpenNetworkForDigitalCommerce" target="_blank" rel="noopener" aria-label="Kooapp"><img src="images/kooapp.png" }}" alt="kooapp"></a>
+    </div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/pr-tsp.js"></script>
+</body>
+</html>

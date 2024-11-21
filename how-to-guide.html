@@ -1,0 +1,145 @@
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pramaan - How to Guide</title>
+    <link rel="preload" href="css/app.css" as="style" />
+    <link rel="stylesheet" type="text/css" href="/cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/base_v1.css">
+    <link rel="stylesheet" href="css/main.min.css"> 
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/pramaan.css">
+	<link rel="stylesheet" href="css/how-to-guide.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+        <img src="https://ondc.org/assets/theme/images/ondc_registered_logo.svg" class="header-logo" alt="ONDC | Open Network for Digital Commerce">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav pr-menu-items">
+        <li class="nav-item">
+          <p><a class="nav-link" aria-current="page" href="index.html">Home</a></p>
+        </li>
+        <li class="nav-item">
+          <p><a class="nav-link" href="toolbox.html">Toolbox</a></p>
+        </li>
+        <li class="nav-item">
+          <p class="active"><a class="nav-link" href="how-to-guide.html">How to guide?</a></p>
+        </li>
+        <li class="nav-item">
+          <p><a class="nav-link" href="find-tsp.html">Find TSPs</a></p>
+        </li>
+        <li class="nav-item">
+          <p><a class="nav-link" href="pr-videos.html">Videos</a></p>
+        </li>
+        <li class="nav-item">
+          <p><a class="nav-link" href="#need-help">Need help</a></p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<div class="tool-banner-section">
+    <div class="container">
+        <p class="to-bnr-title">How to guide?</p>
+        
+    </div>
+</div>
+
+<div class="sub-nav-section">
+    <div class="container">
+        <p><a href="index.html"><b>Home</b></a></p>
+        <p>></p>
+        <p>How to Guide</p>
+    </div>
+</div>
+
+
+<div class="guide-acc-section">
+    <div class="container">
+        <div class="guide-main-div">
+            <p class="guide-title">Prerequisites to being testing using Pramaan</p>
+            <div class="accordion" id="guideaccordion"></div>
+        </div>
+    </div>
+</div>
+
+
+<div class="pr-footer-section" id="need-help">
+    <div class="container">
+        <p class="pr-footer-title">Need Help</p>
+        <div class="row">
+            <div class="col-md-4">
+                <p class="pr-f-main-cnt"><b>Slack Channel:</b></p>
+                <p class="pr-f-sub-cnt">Join our Slack channel: #ext-pramaan-qa</p>
+                <button class="join-btn btn" onclick="window.open('https://portal.ondc.org/user-confirmation','_blank')">Join Now</button>
+            </div>
+            <div class="col-md-4">
+                <p class="pr-f-main-cnt"><b>Email Support</b></p>
+                <p class="pr-f-sub-cnt">Contact us: <a href="mailto:support.pramaan@ondc.org">support.pramaan@ondc.org</a></p>
+            </div>
+            <div class="col-md-4">
+                <p class="pr-f-main-cnt"><b>Feedback</b></p>
+                <p class="pr-f-sub-cnt">Share your feedback: <a href="mailto:support.preprod@ondc.org">support.preprod@ondc.org</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://kit.fontawesome.com/85a73f991c.js" crossorigin="anonymous" wfd-invisible="true"></script>
+    <script type="text/javascript" src="code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script> 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="js/pr-how-to-guide.js"></script>
+
+<script>
+    
+    $(document).ready(function() {
+        //Accordion boxshadow
+
+        // Initial check for already opened accordion
+        $(".accordion-collapse.collapse.show").closest('.accordion-item').css('box-shadow', '0 4px 8px rgba(0, 0, 0, 0.2)');
+
+        // When an accordion item is shown
+        $('.accordion-collapse').on('show.bs.collapse', function () {
+            $(this).closest('.accordion-item').css('box-shadow', '0 4px 8px rgba(0, 0, 0, 0.2)');
+        });
+
+        // When an accordion item is hidden
+        $('.accordion-collapse').on('hide.bs.collapse', function () {
+            $(this).closest('.accordion-item').css('box-shadow', 'none');
+        });
+
+        //Accordion Tab
+        $(".gui-acc-tab-div .gui-acc-tab").click(function(){
+            const $currentTabDiv = $(this).closest('.gui-acc-tab-div');
+            $currentTabDiv.find('.gui-acc-tab').removeClass('active');
+            $(this).addClass('active');
+            $currentTabDiv.nextAll('.gui-acc-tab-cnt').hide();
+            const GuiCntID =  $(this).data('gtabcnt');
+            $currentTabDiv.nextAll('.gui-acc-tab-cnt#' + GuiCntID).show();
+        });
+
+    });
+</script>
+</body>
+</html>

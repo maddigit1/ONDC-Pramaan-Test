@@ -1,0 +1,208 @@
+[
+    {
+        "main_heading": "Understand ONDC architecture",
+        "items":[
+            {
+                "sub_heading":"About the step",
+                "sub_content":"Understanding ONDC architecture is pivotal for building robust, secure, and interoperable software components. By grasping the network's protocol standards, security mechanisms, and performance requirements, developers can ensure their components seamlessly integrate with other ONDC participants. This knowledge empowers developers to optimize component performance, prioritize data privacy, and adapt to future network evolutions. Moreover, understanding the regulatory framework associated with ONDC ensures compliance, mitigating potential legal and operational risks. Ultimately, a deep understanding of ONDC architecture is essential for contributing to the growth and success on the open network."
+            },
+            {
+                "sub_heading":"Steps",
+                "sub_content":"Go through the video on ONDC architecture in the Help & Resources section"
+            },
+            {
+                "sub_heading":"Help & Resources",
+                "sub_content":"<a href='https://drive.google.com/file/d/1WuHCc59C45LClpbiIPomPMuTeClRZw7h/view' target='_blank'>https://drive.google.com/file/d/1WuHCc59C45LClpbiIPomPMuTeClRZw7h/view</a>"
+            }
+        ]
+    },
+    {
+        "main_heading": "Understand how transactions work on ONDC network",
+        "items":[
+            {
+                "sub_heading":"About the step",
+                "sub_content":"Understanding how a transaction works on ONDC network will help you appreciate role and importance of each component"
+            },
+            {
+                "sub_heading":"Steps",
+                "sub_content":"Go through the video on ONDC transaction components in the Help & Resources section"
+            },
+            {
+                "sub_heading":"Help & Resources",
+                "sub_content":"<a href='https://drive.google.com/file/d/1q6vVXm7kJOsZT1ztp7ByaU704-uF0XKt/view?usp=drive_link' target='_blank'>https://drive.google.com/file/d/1q6vVXm7kJOsZT1ztp7ByaU704-uF0XKt/view?usp=drive_link</a>"
+            }
+        ]
+    },
+    {
+        "main_heading": "Components (software) to be built OR you can use services of TSP",
+        "items":[
+            {
+                "sub_heading":"About the step",
+                "sub_content":"Note the components that need to be built are minimum mandatory features to ensure smooth interoperable operations on the network"
+            },
+            {
+                "sub_heading":"Steps",
+                "sub_content": "<span>Confirm that the following aspects are covered within the software that you have built covers the components as mentioned below:</span><ul class='main-list'><li><span>Component 1: UI/UX interface to manage experience for respective users. For instance, look and feel of the user interface, how the journey will be managed, screens, options to be shown to users. These are something which can be built by Buyer App or Seller App as per their preference. ONDC does not have any submission here except the basic branding guidelines which are available on ONDC website under resources section.</span></li><li><span>Component 2: Interaction with Registry (covered in below steps).</span></li><li><span>Component 3: Interaction with Gateway (covered in below steps).</span></li><li><span>Component 4: Interaction using ONDC APIs note all three core, customer grievances and reconciliation APIs are mandatory to be built for smooth running on the network.</span><ul class='sub-list'><li><span>4a. Transaction flows (core).</span></li><li><span>4b. Customer grievances flows.</span></li><li><span>4c. Reconciliation, settlement & payment flows.</span></li></ul></li><li><span>Component 5: Interaction with Network Observability (covered below).</span></li><li><span>Component 6: Disclosures and static terms (Refer to Help & Resources section).</span></li><li><span>Component 7: TLC terms (Refer to Help & Resources section).</span></li></ul>"                
+            },
+            {
+                "sub_heading":"Help & Resources",
+                "sub_content":"Note on disclosures & static terms to be added<br>Note on TLC terms to be added"
+            }
+        ]
+    },
+    {
+        "main_heading": "Authorization: Signing and Verification",
+        "items":[
+            {
+                "sub_heading":"About the step",
+                "sub_content":"In the Open Network for Digital Commerce (ONDC), when subscribers (business entities) communicate, they must verify each other's identities. Each transaction—whether sending or receiving—requires both parties to digitally sign messages. This acts as a contract and en-sures secure, authentic communication."
+            },
+            {
+                "sub_heading":"Steps",
+                "sub_content": "<span>1. Signing Process:</span><ul class='main-list'><li><span>ONDC uses Ed25519 (a secure cryptographic algorithm) with BLAKE-512 hashing to sign messages. Here’s how to perform signing:</span><ul class='sub-list'><li><span>1a. Create a Digest: First, generate a hash (digest) of the message using BLAKE-512. This digest serves as a compact representation of the message.</span></li><li><span>1b. Add Metadata: Include timestamps (created and expires fields) to the message, which indicate when the message was created and when it will expire. This adds extra security.</span></li><li><span>1c. Sign the Digest: Use your private key to sign this digest. This signature is unique to both the message content and your private key.</span></li><li><span>1d. Attach Signature to the Header: Add the signature to the HTTP headers of the request (either Authorization or X-Gateway-Authorization).</span></li></ul></li></ul><span>2. Verification Process</span><ul class='main-list'><li><span>2a. Digest Creation: The receiver of the message recreates the digest using BLAKE-512 to ensure it matches the sender's digest.</span></li><li><span>2b. Check Metadata: They verify that the created and expires timestamps are valid.</span></li><li><span>2c. Signature Verification: Finally, they use the sender's public key to confirm the signature's authenticity. If everything checks out, the message is verified.</span></li></ul><span>3. Utility and Testing:</span><ul class='main-list'><li><span>ONDC provides a signing and verification utility, available through their API libraries, which can be easily integrated to handle these steps programmatically. Link to the utility is available in Help & Resources section.</span></li></ul>"                
+            },
+            {
+                "sub_heading":"Help & Resources",
+                "sub_content":"<a href='https://github.com/ONDC-Official/developer-docs/blob/main/registry/signing-verification.md' target='_blank'>https://github.com/ONDC-Official/developer-docs/blob/main/registry/signing-verification.md</a>"
+            }
+        ]
+    },
+    {
+        "main_heading": "Look-up on environment specific registry",
+        "items":[
+            {
+                "sub_heading":"About the step",
+                "sub_content":"The Look-Up API checks if a BAP or BPP ID is registered in the ONDC network. This ensures that the ONDC Gateway can properly route requests to valid subscribers for a domain for broadcast search queries from Buyer Platforms and ensures that only permissioned buyer applications are able to reach the Seller Platform."
+            },
+            {
+                "sub_heading":"Steps",
+                "sub_content": "<span>1. Endpoints</span><ul class='main-list'><li><span>Each environment has its own Look-up and V-Look-up endpoints:</span><ul class='sub-list'><li><span>• Staging: <span class='code-section'>https://staging.registry.ondc.org/lookup</span></span></li><li><span>• Pre-production: <span class='code-section'>https://preprod.registry.ondc.org/ondc/lookup</span></span></li><li><span>• Production: <span class='code-section'>https://prod.registry.ondc.org/lookup</span></span></li></ul></li></ul><span>2. Making a Look-Up Request</span><ul class='main-list'><li><span>Use curl to perform a Look-Up request. Here's an example for Pre-production:</span><br><span class='code-section'>curl --location --request POST 'https://preprod.registry.ondc.org/ondc/lookup' --header 'Content-Type: application/json' --data-raw '{\"country\": \"IND\", \"domain\": \"ONDC:RET10\"}'</span></li></ul><span>3. Parameters for /vlookup:</span><ul class='main-list'><li><span>• sender_subscriber_id: Your subscriber ID</span></li><li><span>• request_id: Unique request identifier</span></li><li><span>• timestamp: Timestamp in RFC3339 format</span></li><li><span>• signature: Signed search parameters using your private key</span></li><li><span>• search_parameters: Include attributes like country, domain, and subscriber type</span></li></ul>"                
+            },
+            {
+                "sub_heading":"Help & Resources",
+                "sub_content":"<span class='acc-placeholder'>Content will be updated shortly</span>"
+            }
+        ]
+    },
+    {
+        "main_heading": "Select domain that you want to test for",
+        "items":[
+            {
+                "sub_heading":"About the step",
+                "sub_content":"Content will be updated shortly"
+            },
+            {
+                "sub_heading":"Steps",
+                "sub_content":"Content will be updated shortly"
+            },
+            {
+                "sub_heading":"Help & Resources",
+                "sub_content":"<span class='acc-placeholder'>Content will be updated shortly</span>"
+            }
+        ]
+    },
+    {
+        "main_heading": "Subscribe on environment registry",
+        "items":[
+            {
+                "sub_heading":"About the step",
+                "sub_content":"Before you begin testing, ensure you have subscribed to appropriate registry where you are testing with on Pramaan"
+            },
+            {
+                "sub_heading":"Steps",
+                "sub_content": "<span>Prerequisites</span><ul class='main-list'><li><span>1.Whitelisting: Before subscribing, you need approval on the ONDC registry. Use the ONDC Participant Portal to complete your profile and request access to the desired environment (e.g., Staging, Pre-Production, Production).</span></li><li><span>2.Generating Cryptographic Keys</span><ul class='sub-list'><li><span>2.a.Signing and Encryption Key Pairs:</span><ul class='sub-list'><li><span>2.a.i.Signing Key Pair: Generate with Ed25519 for digital signatures.</span></li><li><span>2.a.ii.Encryption Key Pair: Generate with X25519 for secure data exchange.</span></li></ul></li></ul></li><li><span>3.How to Generate:</span><ul class='sub-list'><li><span>3.a.Using OpenSSL: Here’s a quick guide:</span><ul class='sub-list'><li><span class='code-section'>openssl genpkey -algorithm Ed25519 -out signing_private_key.pem</span></li><li><span class='code-section'>openssl pkey -in signing_private_key.pem -pubout -out signing_public_key.pem</span></li></ul></li><li><span>3.b.Site-Verification HTML: After whitelisting, You need to generate a unique HTML file for site verification. This file should be uploaded to the root directory of your website. The ONDC team uses it to confirm the authenticity of your domain. Ensure this is in place before proceeding with the subscription. With the following content:</span><span class='code-section'>&lt;!-- Contents of ondc-site-verification.html --&gt; &lt;!-- Replace SIGNED_UNIQUE_REQ_ID with the actual value --&gt; &lt;html&gt; &lt;head&gt; &lt;meta name='ondc-site-verification' content='SIGNED_UNIQUE_REQ_ID' /&gt; &lt;/head&gt; &lt;body&gt; ONDC Site Verification Page &lt;/body&gt; &lt;/html&gt;</span></li></ul></li></ul><span>3.Subscription Process</span><ul class='main-list'><li><span>Endpoint: Use the /subscribe endpoint for the environment in which you’re whitelisted (Staging, Pre-Production, or Production).</span></li><li><span>Payload Details:</span><ul class='sub-list'><li><span>Required fields include subscriber_id, signing_public_key, encryption_public_key, and other identifiers like country and domain.</span></li><li><span>Sample Request:</span><span class='code-section'>curl --location --request POST 'https://preprod.registry.ondc.org/subscribe' \\ --header 'Content-Type: application/json' \\ --data-raw '{\"subscriber_id\": \"your_domain.com\", \"signing_public_key\": \"your_generated_public_signing_key\", \"encryption_public_key\": \"your_generated_public_encryption_key\", \"country\": \"IND\", \"city\": \"your_city\", \"domain\": \"ONDC:RET10\"}'</span></li></ul></li><li><span>Verification: To confirm your subscription, use the /lookup endpoint to check if your subscriber_id is now registered.</span></li></ul><span>4.Troubleshooting and Error Handling</span><ul class='main-list'><li><span>4.a.HTTP 403 - Forbidden:</span><ul class='sub-list'><li><span>Cause: Usually occurs if your IP address isn’t whitelisted or if your site-verification HTML file is missing.</span></li><li><span>Solution: Ensure that your IP is correctly registered and the site-verification HTML file is uploaded. Reach out to ONDC support if the issue persists.</span></li></ul></li><li><span>4.b.HTTP 400 - Bad Request:</span><ul class='sub-list'><li><span>Cause: This error often results from missing or incorrectly formatted fields in the payload, such as the subscriber_id, signing_public_key, or encryption_public_key.</span></li><li><span>Solution: Double-check the payload format and ensure all fields are correctly populated. Refer to the Swagger API specs for accurate field requirements.</span></li></ul></li><li><span>4.c.Invalid Signature Error:</span><ul class='sub-list'><li><span>Cause: Occurs if the signing keys do not match the subscriber ID or the signature generation is incorrect.</span></li><li><span>Solution: Re-generate and double-check your signing keys, ensuring that the private key signs your payload accurately.</span></li></ul></li><li><span>4.d.Site Verification Failure:</span><ul class='sub-list'><li><span>Cause: This happens when the ONDC team cannot verify the HTML file in your website’s root directory.</span></li><li><span>Solution: Confirm the file is named as requested by ONDC and accessible publicly. You can verify it by navigating to yourdomain.com/ONDC-verification.html.</span></li></ul></li><li><span>4.e.Missing Subscriber in Lookup:</span><ul class='sub-list'><li><span>Cause: Your subscription is incomplete if you cannot locate your subscriber_id in the /lookup response.</span></li><li><span>Solution: Retry the subscription process or contact ONDC support with details, including your subscriber ID and the exact error message.</span></li></ul></li><li><span>4.f.Other Unknown Errors:</span><ul class='sub-list'><li><span>Solution: Document the error details (error code, subscriber ID, and timestamp) and contact ONDC technical support with a description of the issue for further assistance.</span></li></ul></li></ul>" 
+            },
+            {
+                "sub_heading":"Help & Resources",
+                "sub_content":"For a detailed step-by-step reference, visit the ONDC Onboarding Guide. <a href='https://github.com/ONDC-Official/developer-docs/blob/main/registry/OnboardingofParticipants.md' target='_blank'>https://github.com/ONDC-Official/developer-docs/blob/main/registry/OnboardingofParticipants.md</a>"
+            }
+        ]
+    },
+    {
+        "main_heading": "SEARCH on gateway (for buyer app)",
+        "items":[
+            {
+                "sub_heading":"About the step",
+                "sub_content":"Content will be updated shortly"
+            },
+            {
+                "sub_heading":"Steps",
+                "sub_content": "<span>A. API specification for search (domain specific)</span><ul class='main-list'><li><span>i.Ensuring that Content-Type header is application/json</span></li><li><span>ii.Verify the search API specification is in accordance with the Swagger UI and the intent Enums are proper.</span></li></ul><span>B. Endpoint where this hit is to be made</span><ul class='main-list'><li><span>i.The Gateway URI should be the correct one depending upon the environments i.e. preprod and staging respectively</span></li><li><span>ii.Ensure you are getting ACK from the gateway.</span></li></ul><span>C. Expected response</span><ul class='main-list'><li><span>i.ACK response on the sync response from gateway and on_search from Pramaan and other sellers</span></li></ul><span>D. Checking for Gateway not forwarding your search request (whitelisting issue or related)</span><ul class='main-list'><li><span>i.Please verify that you are whitelisted and are properly configured</span></li><li><span>ii.Try hitting the search API directly to Pramaan and check for the response from Pramaan</span></li></ul><span>E. Checking for NACK or response from Pramaan which might have prevented the flow from starting</span><ul class='main-list'><li><span>i.You’ll be getting the error code and message in the console window</span></li><li><span>ii.Try hitting the search API directly to Pramaan and check for the response from Pramaan</span></li></ul>"                
+            },
+            {
+                "sub_heading":"Help & Resources",
+                "sub_content":"<span class='acc-placeholder'>Content will be updated shortly</span>"
+            }
+        ]
+    },
+    {
+        "main_heading": "Accept ON_SEARCH on gateway (for Seller App)",
+        "items":[
+            {
+                "sub_heading":"About the step",
+                "sub_content":"<span class='acc-placeholder'>Content will be updated shortly</span>"
+            },
+            {
+                "sub_heading":"Steps",
+                "sub_content": "<span>A. API specification for search (domain specific)</span><ul class='main-list'><li><span>i.Ensure the Content-Type header is application/json and the version of the API is proper and correct.</span></li><li><span>ii.For on_search call, ensure you are getting ACK from Pramaan’s Buyer.</span></li></ul><span>B. Endpoint where this hit is to be made</span><ul class='main-list'><li><span>i.Ensure you are hitting this request to bap_uri + /on_search API.</span></li></ul><span>C. Expected response</span><ul class='main-list'><li><span>i.ACK response on sync response from Pramaan’s Buyer or NACK with error code and message if there is an issue with the Schema.</span></li></ul>"                
+            },
+            {
+                "sub_heading":"Help & Resources",
+                "sub_content":"<span class='acc-placeholder'>Content will be updated shortly</span>"
+            }
+        ]
+    },
+    {
+        "main_heading": "Test individual API using Pramaan mock servers",
+        "items":[
+            {
+                "sub_heading":"About the step",
+                "sub_content":"<span class='acc-placeholder'>Content will be updated shortly</span>"
+            },
+            {
+                "sub_heading":"Steps",
+                "sub_content": "<span>A. API specification for search (domain specific)</span><ul class='main-list'><li><span>i.It should have a context and message property where context needs to have all the fields mentioned in the Swagger UI/Documents, meanwhile message should have an intent property and must contain permissible and valid Enums only.</span></li></ul><span>B. API specification for IGM</span><ul class='main-list'><li><span>i.As a Seller: You’d need to run a flow at least till confirm/on_confirm call in order to test the IGM flow on Pramaan.</span></li><li><span>ii.As a Buyer: In order to test IGM on Pramaan, you need to use a transaction_id which already has run at least till confirm/on_confirm.</span></li></ul>"                
+            },
+            {
+                "sub_heading":"Help & Resources",
+                "sub_content":"<span class='acc-placeholder'>Content will be updated shortly</span>"
+            }
+        ]
+    },
+    {
+        "main_heading": "Handling Payments URL while testing on Pramaan",
+        "items":[
+            {
+                "sub_heading":"About the step",
+                "sub_content":"<span class='acc-placeholder'>Content will be updated shortly</span>"
+            },
+            {
+                "sub_heading":"Steps",
+                "sub_content": "<span>○ As a Seller</span><ul class='main-list'><li><span>i.Pramaan will be expecting a payment url depending upon the payment.type value, which Pramaan will be consuming and redirecting you to a payment action.</span></li><li><span>ii.Pramaan will be expecting an unsolicited on_status call from your end for payment success/failure and corresponding transaction_id.</span></li></ul><span>○ As a Buyer</span><ul class='main-list'><li><span>i.You’ll be getting a url in the payments array in order to perform the payment action.</span></li><li><span>ii.You’ll be getting the payment success/failure and the corresponding payment/transaction_id via an unsolicited call after a form with mimetype: application/html is submitted.</span></li></ul>"                
+            },
+            {
+                "sub_heading":"Help & Resources",
+                "sub_content":"<span class='acc-placeholder'>Content will be updated shortly</span>"
+            }
+        ]
+    },
+    {
+        "main_heading": "Handling Forms on Pramaan",
+        "items":[
+            {
+                "sub_heading":"About the step",
+                "sub_content":"<span class='acc-placeholder'>Content will be updated shortly</span>"
+            },
+            {
+                "sub_heading":"Steps",
+                "sub_content": "<span>A. As a Buyer</span><ul class='main-list'><li><span>i.Ensure that you are getting the submission_id from Pramaan upon form submission.</span></li><li><span>ii.You’ll be getting the form_response.status and submission_id via an unsolicited call after a form with mimetype: application/html is submitted.</span></li><li><span>iii.Ensure that you are submitting the form at the correct API, there can be three cases for form submission with mimetype: text/html:</span><ul class='sub-list'><li><span>1. No action attribute in form:</span><ul class='sub-list'><li><span>a. Here you are expected to submit the form at the url given in xinput.form.url only.</span></li></ul></li><li><span>2. Action attribute with absolute url:</span><ul class='sub-list'><li><span>a. Here you are expected to submit the form at the url given in the action attribute of the form.</span></li></ul></li><li><span>3. Action attribute with relative url:</span><ul class='sub-list'><li><span>a. Here you are expected to append the relative url from action attribute to the base url of Pramaan, which happens to be pramaan.ondc.org.</span></li></ul></li></ul></li></ul><span>B. As a Seller</span><ul class='main-list'><li><span>i.Ensure that you are using the correct heading and indices like max, min and cur as we use them on Pramaan for mapping the step the journey currently is on.</span></li><li><span>ii.Ensure that you are using correct mimetype for the forms, since only forms with mimetype: application/html are redirected, forms with mimetype: text/html are expected to be filled from Pramaan’s UI.</span></li><li><span>iii.Ensure that you are sending unsolicited on_status calls after a redirect form (form with mimetype: application/html) are submitted as they are used as trigger for the next call on Pramaan.</span></li></ul>"                
+            },
+            {
+                "sub_heading":"Help & Resources",
+                "sub_content":"<span class='acc-placeholder'>Content will be updated shortly</span>"
+            }
+        ]
+    }
+]
+
+    
