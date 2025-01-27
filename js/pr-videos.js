@@ -38,7 +38,6 @@ function loadVideoData() {
         .then(response => response.json())
         .then(data => {
             VideoData = data;
-            console.log("Video data loaded:", VideoData);  // Confirm data is loaded
         })
         .catch(error => console.error("Error loading video data:", error));
 }

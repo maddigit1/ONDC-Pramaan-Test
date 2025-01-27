@@ -3,8 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pramaan</title>
-    <link rel="preload" href="css/app.css" as="style" />
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />   
+    <link rel="preload" href="css/app.css" as="style" /> 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="css/reset.min.css">
@@ -17,7 +16,24 @@
     <link rel="stylesheet" href="css/pramaan.css">
 </head>
 <body>
-
+<style>
+/*Style for Notification Text:Start*/
+/* .notification-txt{
+    max-width: 64rem;
+    background-color: black;
+    color: white !important;
+    padding: 10px;
+    font-size: 14px !important;
+    line-height: 18px;
+}
+@media (max-width:425px) {
+    .notification-txt{
+        margin-bottom: 10px;
+        font-size: 12px !important;
+    }
+} */
+/*Style for Notification Text:End*/
+</style>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
@@ -221,6 +237,7 @@
 <div class="modal fade video-popup" id="start-testing" tabindex="-1" aria-labelledby="start-testingLabel" aria-hidden="false">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content vid-main-div">
+        <!-- <p class="notification-txt">We are upgrading the Pramaan UI to a newer version, which is currently in beta phase. The updated UI will go live on January 9, 2025, and the previous version will be discontinued. Please plan accordingly and ensure that all new testing is conducted and validated on the updated UI.</p> -->
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="start-testingLabel">Select domain to view prerequisites</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -239,10 +256,10 @@
                         <label class="d-flex radio-label" for="preprod-env"><p>Testing in preprod environment</p></label>   
                     </div>
                 </li>
-                <li>
+                <!-- <li>
                     <input type="radio" id="for-other" name="domain" value="other">
                     <label class="d-flex radio-label" for="for-other"><p><b>Existing Version: Retail B2C, Logistics (older UI)</b> (Note: you will be redirected to the older UI of Pramaan)</p></label>
-                </li>
+                </li> -->
             </ul>
             <button class="btn pr-bnr-btn pre-req-1st-btn">Continue</button>
         </div>
@@ -293,7 +310,7 @@
         <p>|</p>
         <p><a href="">Terms of use</a></p>
     </div>
-    <div class="copyright-div">ONDC | Open Network for Digital Commerce © 2024</div>
+    <div class="copyright-div">ONDC | Open Network for Digital Commerce © 2025</div>
     <div class="social-icons-div">
         <a href="https://www.linkedin.com/company/open-network-for-digital-commerce" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="images/linkedin.png" alt="linkedin"></a>
         <a href="https://www.instagram.com/ondc_official/" target="_blank" rel="noopener" aria-label="Instagram"><img src="images/instagram.png" alt="instagram"></a>
@@ -305,13 +322,9 @@
 </div>
 
 
-<script src="https://kit.fontawesome.com/85a73f991c.js" crossorigin="anonymous" wfd-invisible="true"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script> 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script src="js/script.js"></script>
 <script src="js/pr-videos.js"></script>
 <script>
     // Counter Animation 
@@ -361,16 +374,16 @@
         if (selectedValue === "stg-env") {
 
             console.log("Staging env");
-            window.open('https://pramaan.ondc.org/beta/staging/gui/iframe', '_self')
+            window.open('https://ondc.org/pramaan/beta/staging/gui/iframe', '_self')
             console.log("Staging env end");
             
         } else if (selectedValue === "preprod-env") {
             console.log("Preprod env");
-            window.open('https://pramaan.ondc.org/beta/preprod/gui/iframe', '_self')
+            window.open('https://ondc.org/pramaan/beta/preprod/gui/iframe', '_self')
             
         } else if (selectedValue === "other") {
             console.log("other");
-            window.open('https://pramaan.ondc.org/', '_self');
+            window.open('https://ondc.org/pramaan/alpha/frontend/', '_self');
         }
     });
 

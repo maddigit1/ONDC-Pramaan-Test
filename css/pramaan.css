@@ -1,6 +1,6 @@
 @font-face {
     font-family: Oxygen;
-    src: url(/assets/fonts/oxygen/Oxygen.ttf);
+    src: url(../fonts/Oxygen.ttf);
 }
 body{
     background-color: white!important;
@@ -22,6 +22,25 @@ p{
 footer{
     display: none;
 }
+
+
+/*Style for Notification Text:Start*/
+.notification-txt{
+    max-width: 64rem;
+    background-color: black;
+    color: white !important;
+    padding: 10px;
+    font-size: 14px !important;
+    line-height: 18px;
+}
+@media (max-width:425px) {
+    .notification-txt{
+        margin-bottom: 10px;
+        font-size: 12px !important;
+    }
+}
+/*Style for Notification Text:End*/
+
 /* Common banner section: Start  */
 .tool-banner-section{
     padding-top: 112px;
@@ -923,6 +942,7 @@ input[type="radio"]:checked + .radio-label::before {
     .radio-label::before {
         min-width: 15px;
         height: 15px;
+        width: 15px;
     }
     .pr-bnr-btn {
         margin-bottom: 0;
